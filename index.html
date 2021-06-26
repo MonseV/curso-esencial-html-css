@@ -135,5 +135,17 @@
       Si tienes alguna pregunta escríbeme a
       <a href="mailto:me@leonidasesteban.com">me@leonidasesteban.com</a>
     </p>
+
+    <script>
+      const $detailList = document.querySelectorAll('details')
+      $detailList.forEach(($details) => {
+        $details.querySelector('summary').addEventListener('click',expand)
+      })
+      function expand() {
+        $detailList.forEach(($details) => {
+          $details.removeAttribute('open')
+        })
+      }
+    </script>
   </body>
 </html>
